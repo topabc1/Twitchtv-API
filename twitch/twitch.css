@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #C8C8C8;
+}
+
+#container {
+	max-width: 50rem;
+	margin: auto;
+}
+
+#top {
+	background-color: #84776F;
+	color: #C8C8C8;
+	font-weight: bold;
+	max-width: 50rem;
+	height: 6rem;
+	text-align: center;
+	margin: auto;
+}
+
+#top h1 {
+	font-size: 2.5rem;
+	padding-top: 1.5rem;
+	margin-left: -12rem;
+}
+
+#btns {
+	position: absolute;
+	margin-top: -5.5rem;
+}
+
+.btn {
+	background-color: #C8C8C8;
+	color: #84776F;
+	width: 6rem;
+	height: 1.5rem;
+	margin-top: 0.2rem;
+	padding-top: 0.25rem;
+	font-size: 0.6rem;
+	font-weight: 800;
+	cursor: pointer;
+	margin-left: 4rem;
+	transition: margin-left 0.8s;
+}
+
+.btn-txt {
+	padding: 0;
+	position: absolute;
+	margin-left: 2.8rem;
+	margin-top: 0rem;
+}
+
+.btn-circle {
+	display: inline-block;
+	height: 0.8rem;
+	width: 0.8rem;
+	background-color: #84776F;
+	border-radius: 50%;
+	border: 0.15rem solid #84776F;
+	margin-left: -2.5rem;
+	position: absolute;
+	padding: 0;
+}
+
+#all-btn {
+	margin-left: 0;
+}
+
+#all-btn-txt {
+	margin-left: 4.3rem;
+}
+
+#online-btn-txt {
+	margin-left: 3rem;
+	display: none;
+}
+
+#offline-btn-txt {
+	display: none;
+}
+
+#online-btn-circle {
+	background-color: #B4B674;
+}
+
+#offline-btn-circle {
+	background-color: #748FB6;
+}
+
+#bottom {
+	max-width: 50rem;
+	height: 0.5rem;
+	background-color: #84776F;
+	margin-top: 0.2rem;
+}
+
+.display {
+	max-width: 50rem;
+	height: 5rem;
+	background-color: #84776F;
+	margin-top: 0.2rem;
+}
+
+.display img {
+	height: 4rem;
+	width: 4rem;
+	border: 0.2rem solid #C8C8C8;
+	border-radius: 50%;
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+	display: inline-block;
+}
+
+.a {
+	position: absolute;
+	margin-top: -3rem;
+	margin-left: 4rem;
+	text-align: center;
+	width: 12rem;
+}
+
+.display a {
+	text-decoration: none;
+}
+
+.display a:hover {
+	text-decoration: underline;
+}
+
+.p {
+	position: absolute;
+	margin-left: 17rem;
+	margin-top: -4rem;
+	text-align: center;
+	width: 30rem;
+}
+
+.display p {
+	font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+	.status {
+		display: none;
+	}
+	
+	.a {
+		margin-top: -4rem;
+		max-width: 100%;
+		margin-left: 12rem;
+	}
+	
+	.p {
+		margin-top: -3rem;
+		max-width: 100%;
+		margin-left: 3rem;
+	}
+}
