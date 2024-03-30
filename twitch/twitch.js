@@ -12,15 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		];
 		let timeout;
 		let selector = "all";
-
-		loadingScreenStart();
+		let loadingScreenProgress = 0;
 		
 		for(let i = 0; i < streamers.length; i++) {
+			document.querySelector("#display").innerHTML = `
+				<div id="loading-screen">
+					<i class="fa-solid fa-spinner"></i>
+					LOADING ${(loadingScreenProgress / streamers.length * 100).toFixed()}%
+				</div>
+			`;
+			
+			loadingScreenProgress++;
+			
 			let res = await fetch(`https://twitch-proxy.freecodecamp.rocks/twitch-api/channels/${streamers[i].name}`);
 			const channelData = await res.json();
 			res = await fetch(`https://twitch-proxy.freecodecamp.rocks/twitch-api/streams/${streamers[i].name}`);
 			const streamData = await res.json();
-
+			
 			streamers[i].logo = channelData.logo;
 			streamers[i].url = channelData.url;
 			streamers[i].game = channelData.game;
@@ -166,18 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					});
 				}
 			}
-		}
-
-
-
-
-
-		function loadingScreenStart() {
-			document.querySelector("#display").innerHTML = `
-			<div class="display">
-				LOADING
-			</div>
-			`;
 		}
 
 
