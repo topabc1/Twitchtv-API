@@ -143,6 +143,13 @@ body {
 	font-style: italic;
 }
 
+#loading-screen {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-width: 768px) {
 	.status {
 		display: none;
@@ -160,3 +167,4 @@ body {
 		margin-left: 3rem;
 	}
 }
+
